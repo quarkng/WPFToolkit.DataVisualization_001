@@ -27,6 +27,15 @@
             </StackPanel>
         </TabItem>
 
+        <TabItem Header="Line Dynamic">
+            <StackPanel Margin="10">
+                <Button x:Name="btnLine1" Content="Add dynamic data to chart (3 points)" Margin="20" Click="btnLine1_Click"/>
+                <chrt:Chart Title="Dynamic Line Graph" Height="500" Width="500" VerticalAlignment="Top" HorizontalAlignment="Stretch">
+                    <chrt:LineSeries x:Name="lineSer1"  DependentValuePath="Y" IndependentValuePath="X"  Title="Line of Random 1" />
+                    <chrt:LineSeries x:Name="lineSer2"  DependentValuePath="Y" IndependentValuePath="X"  Title="Line of Random 2"/>
+                </chrt:Chart>
+            </StackPanel>
+        </TabItem>
 
 
 
