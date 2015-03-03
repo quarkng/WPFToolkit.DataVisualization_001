@@ -1,0 +1,42 @@
+﻿<Window x:Class="DataVisualization_001.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:DataVisualization_001"
+        xmlns:datvis="clr-namespace:System.Windows.Controls.DataVisualization;assembly=System.Windows.Controls.DataVisualization.Toolkit" 
+        xmlns:chrt="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
+        Title="System.Windows.Controls.DataVisualization.Toolkit " Height="700" Width="700">
+    <TabControl>
+        
+        <TabItem Header="Bar">
+            <StackPanel Margin="10">
+                <Button x:Name="btnBar1" Content="Add data to chart" Margin="20" Click="btnBar1_Click"/>
+
+                <chrt:Chart  Title="Chart Named &quot;barChart&quot;" Height="500" Width="500" VerticalAlignment="Top">
+                    <chrt:BarSeries x:Name="barChart" DependentValuePath="Value" IndependentValuePath="Key" />
+                </chrt:Chart>
+
+            </StackPanel>
+        </TabItem>
+
+
+        <TabItem Header="Column">
+            <StackPanel Margin="10">
+                <chrt:Chart Title="Chart Named &quot;colChart&quot;" Height="500" Width="500" VerticalAlignment="Top" HorizontalAlignment="Stretch">
+                    <chrt:ColumnSeries x:Name="colChart"  DependentValuePath="Value" IndependentValuePath="Key" ItemsSource="{Binding this.Data}" />
+                </chrt:Chart>
+            </StackPanel>
+        </TabItem>
+
+
+
+
+
+
+
+        <TabItem Header="Template">
+            <StackPanel Margin="10">
+                <Label Content="Delete Me!!!" HorizontalContentAlignment="Center" Height="50" Width="200" FontSize="24" Background="#FFCF1B1B" Foreground="#FFF5E116" ToolTip="Delete this Label.  This tab is only a template." HorizontalAlignment="Center"/>
+            </StackPanel>
+        </TabItem>
+    </TabControl>
+</Window>
